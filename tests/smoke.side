@@ -1,0 +1,90 @@
+{
+  "id": "cd670360-9ec0-4f62-abb3-bfb8c0c2eb9a",
+  "version": "2.0",
+  "name": "Smoke Test",
+  "url": "http://127.0.0.1:5500",
+  "tests": [{
+    "id": "b3be1bba-2220-462c-b7e1-a179ab9c43a5",
+    "name": "Home Page Expected Header Items",
+    "commands": [{
+      "id": "1e042c98-12b2-4b48-865d-f2be673ba6d1",
+      "comment": "",
+      "command": "open",
+      "target": "/teton/1.6/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8cd96b1c-42f0-48b4-b557-771957e3d238",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c864d713-8d12-4f2d-999e-916f506b43ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-logo img",
+      "targets": [
+        ["css=.header-logo img", "css:finder"],
+        ["xpath=//img[@alt='Teton Chamber of Commerce Logo']", "xpath:img"],
+        ["xpath=//div[@id='content']/header/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "766e4dc5-0bbb-474c-ba57-91e0a1671600",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.header-logo img",
+      "targets": [
+        ["css=.header-logo img", "css:finder"],
+        ["xpath=//img[@alt='Teton Chamber of Commerce Logo']", "xpath:img"],
+        ["xpath=//div[@id='content']/header/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97b74baa-9f50-44b2-87a0-ce88eb7fe28d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.header-title > h1",
+      "targets": [
+        ["css=.header-title > h1", "css:finder"],
+        ["xpath=//div[@id='content']/header/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Teton Idaho')]", "xpath:innerText"]
+      ],
+      "value": "Teton Idaho"
+    }, {
+      "id": "3c9ebfb7-065c-423c-9094-5d24c4855e62",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.header-title > h2",
+      "targets": [
+        ["css=.header-title > h2", "css:finder"],
+        ["xpath=//div[@id='content']/header/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Chamber of Commerce')]", "xpath:innerText"]
+      ],
+      "value": "Chamber of Commerce"
+    }, {
+      "id": "6534b67d-c7b5-42c9-ad55-b31b89a1c0cb",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Teton Idaho CoC",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c2d5d051-df5b-4186-a5e3-47e7ff3c2157",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b3be1bba-2220-462c-b7e1-a179ab9c43a5"]
+  }],
+  "urls": ["http://127.0.0.1:5500/"],
+  "plugins": []
+}
